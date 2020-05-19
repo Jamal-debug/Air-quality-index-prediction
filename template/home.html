@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{url_for('static' , filename='mystyle.css')}}">
+<title>Home page</title>
+</head>
+<body>
+<h2 align="center">AIR QUALITY INDEX PREDICTION</h2>
+<div class ="wrap">
+    <form action="/predict" method="POST" align="center">
+        <input type="text" name="p" placeholder="PT08.S1(CO)" required="required"/><br>
+        <input type="text" name="g" placeholder="C6H6(GT)" required="required"/><br>
+        <input type="text" name="b" placeholder="PT08.S2(NMHC)" required="required"/><br>
+        <input type="text" name="s" placeholder="PT08.S3(NOx)" required="required"/><br>
+        <input type="text" name="i" placeholder="PT08.S4(NO2)" required="required"/><br>
+        <input type="text" name="B" placeholder="PT08.S5(O3) required="required"/><br>
+        <input type="text" name="d" placeholder="T" required="required"/><br>
+        
+        
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large" style="width:100%;box-sizing:border-box;margin-top:30px;outline:none;background:#60adde;opacity:0.7;border-radius:20px;font-size:20px;color:#fff;" >predict</button>
+    </form>
+
+</div>
+<h2 align="center"><b>{{pred}}</b><h2>
+</body>
+</html>
